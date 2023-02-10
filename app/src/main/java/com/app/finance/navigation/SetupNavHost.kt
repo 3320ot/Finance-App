@@ -5,9 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.app.finance.screens.main.MainScreen
+import com.app.finance.screens.mainDetails.MainDetailsScreen
 
 sealed class Screens(val rout: String) {
     object MainScreen: Screens(rout = "main_screen")
+    object MainDetailsScreen: Screens(rout = "main_details_screen")
 }
 
 @Composable
@@ -18,6 +20,9 @@ fun SetupNavHost(navController: NavHostController) {
     ) {
         composable(route = Screens.MainScreen.rout) {
             MainScreen(navController = navController)
+        }
+        composable(route = Screens.MainDetailsScreen.rout) {
+            MainDetailsScreen(navController = navController)
         }
     }
 }
