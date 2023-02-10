@@ -73,18 +73,12 @@ fun MainScreen(
                     .fillMaxWidth()
                     .padding(top = 28.dp)
             ) {
-                ItemMain(
-                    modifier = Modifier
-                        .clickable { navController.navigate(Screens.MainDetailsScreen.rout) }
-                )
-                ItemMain(
-                    modifier = Modifier
-                        .clickable { navController.navigate(Screens.MainDetailsScreen.rout) }
-                )
-                ItemMain(
-                    modifier = Modifier
-                        .clickable { navController.navigate(Screens.MainDetailsScreen.rout) }
-                )
+                history.forEach { transaction ->
+                    ItemMain(
+                        modifier = Modifier
+                            .clickable { navController.navigate(Screens.MainDetailsScreen.rout + "/${transaction.id}") }
+                    )
+                }
             }
         }
     }

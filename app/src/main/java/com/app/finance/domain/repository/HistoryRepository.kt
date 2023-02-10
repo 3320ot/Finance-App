@@ -7,6 +7,8 @@ import javax.inject.Inject
 class HistoryRepository @Inject constructor(private val historyRepositoryImpl: HistoryRepositoryImpl) {
     suspend fun getHistory(): List<Transaction> = historyRepositoryImpl.getHistory()
 
+    suspend fun getHistoryPerDay(date: java.sql.Date): List<Transaction> = historyRepositoryImpl.getTransactionsPerDay(date)
+
     suspend fun insertTransaction(transaction: Transaction) = historyRepositoryImpl.insertTransaction(transaction = transaction)
 
     suspend fun deleteTransaction(transaction: Transaction) = historyRepositoryImpl.deleteTransaction(transaction = transaction)
