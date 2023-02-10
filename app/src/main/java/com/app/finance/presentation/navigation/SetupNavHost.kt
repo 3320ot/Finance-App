@@ -1,11 +1,11 @@
-package com.app.finance.navigation
+package com.app.finance.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.app.finance.screens.main.MainScreen
-import com.app.finance.screens.mainDetails.MainDetailsScreen
+import com.app.finance.presentation.screens.details.MainDetailsScreen
+import com.app.finance.presentation.screens.main.MainScreen
 
 sealed class Screens(val rout: String) {
     object MainScreen: Screens(rout = "main_screen")

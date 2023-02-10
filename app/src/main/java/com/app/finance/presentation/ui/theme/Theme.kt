@@ -1,10 +1,14 @@
-package com.app.finance.ui.theme
+package com.app.finance.presentation.screens.main.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import com.app.finance.presentation.ui.theme.Purple200
+import com.app.finance.presentation.ui.theme.Purple500
+import com.app.finance.presentation.ui.theme.Purple700
+import com.app.finance.presentation.ui.theme.Teal200
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -29,11 +33,7 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun FinanceAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
+    val colors = if (darkTheme) DarkColorPalette else LightColorPalette
 
     MaterialTheme(
         colors = colors,

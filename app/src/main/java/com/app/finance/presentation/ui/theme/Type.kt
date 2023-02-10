@@ -1,4 +1,4 @@
-package com.app.finance.ui.theme
+package com.app.finance.presentation.screens.main.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

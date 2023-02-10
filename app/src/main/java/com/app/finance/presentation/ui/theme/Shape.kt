@@ -1,4 +1,4 @@
-package com.app.finance.ui.theme
+package com.app.finance.presentation.screens.main.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
